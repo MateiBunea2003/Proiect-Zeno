@@ -1,0 +1,86 @@
+/* Stiluri CSS pentru a face site-ul să se încadreze perfect în fereastra browser-ului */
+body {
+    font-family: Arial, sans-serif; /* Setează fontul textului la Arial sau un font fără serife */
+    margin: 0; /* Elimină marginile implicite ale paginii */
+    padding: 0; /* Elimină padding-ul implicit al paginii */
+}
+
+header {
+    background-color: #333; /* Setează culoarea de fundal a antetului la negru */
+    color: #fff; /* Setează culoarea textului la alb */
+    padding: 20px; /* Adaugă spațiu de 20px în interiorul antetului */
+    text-align: center; /* Aliniază textul la centru */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Stiluri pentru footer */
+footer {
+    position: fixed; /* Fixează footerul în partea de jos a ferestrei browser-ului */
+    bottom: 0; /* Plasează footerul la baza paginii */
+    width: 100%; /* Extinde footerul pe întreaga lățime a paginii */
+    background-color: #333; /* Setează culoarea de fundal a footerului la negru */
+    color: #fff; /* Setează culoarea textului la alb */
+    padding: 10px 20px; /* Adaugă spațiu de 10px pe verticală și 20px pe orizontală în interiorul footerului */
+    text-align: center; /* Aliniază textul din footer la centru */
+}
+
+
+main {
+    padding: 20px; /* Adaugă spațiu de 20px în interiorul elementului main */
+}
+
+section {
+    margin-bottom: 20px; /* Adaugă un spațiu de 20px între secțiuni */
+}
+
+/* Stiluri pentru tabel */
+table {
+    width: 100%; /* Face ca tabelul să se extindă pe întreaga lățime a containerului */
+    border-collapse: collapse; /* Combina marginile celulelor pentru un aspect mai curat */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Adaugă o linie de margine de 1px solid între celule */
+    padding: 8px; /* Adaugă un spațiu de 8px în interiorul celulelor */
+    text-align: center; /* Aliniază textul din celule la centru */
+}
+
+th {
+    background-color: #f2f2f2; /* Setează culoarea de fundal a celulelor antet la gri deschis */
+}
+
+/* Stiluri pentru a face site-ul responsiv */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 10px; /*  spațiul de padding al antetului la 10px pentru dispozitivele cu lățime mică */
+    }
+
+    nav ul li {
+        display: block; /* Schimbă afișarea elementelor listei la bloc pentru a le alinia vertical */
+        margin-bottom: 10px; /* Adaugă un spațiu între elementele listei */
+    }
+
+    nav ul li a {
+        padding: 5px 10px; /*  spațiul de padding pentru link-uri la 5px pe verticală și 10px pe orizontală */
+    }
+}
