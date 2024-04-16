@@ -1,8 +1,7 @@
 /* Stiluri CSS pentru a face site-ul să se încadreze perfect în fereastra browser-ului */
 body {
-    font-family: Arial, sans-serif; /* Setează fontul textului la Arial sau un font fără serife */
-    margin: 0; /* Elimină marginile implicite ale paginii */
-    padding: 0; /* Elimină padding-ul implicit al paginii */
+    overflow-x: hidden; /* Ascunde bara de scroll orizontală */
+    margin: 0; /* Elimină marginile implicite ale corpului paginii */
 }
 
 header {
