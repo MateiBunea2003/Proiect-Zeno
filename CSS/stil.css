@@ -1,56 +1,109 @@
 /* Stiluri CSS pentru a face site-ul să se încadreze perfect în fereastra browser-ului */
 body {
     overflow-x: hidden; /* Ascunde bara de scroll orizontală */
-    margin: 0; /* Elimină marginile implicite ale corpului paginii */
+    margin: 0; /* Elimină marginile implicite ale corpului paginii*/
 }
 
+/* Stiluri pentru antet */
 header {
     background-color: #333; /* Setează culoarea de fundal a antetului la negru */
     color: #fff; /* Setează culoarea textului la alb */
     padding: 20px; /* Adaugă spațiu de 20px în interiorul antetului */
     text-align: center; /* Aliniază textul la centru */
+    transition: background-color 0.3s ease; /* Adaugă o tranziție lină la schimbarea culorii de fundal */
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-}
-
+/* Stiluri pentru linkurile din meniu */
 nav ul li a {
     padding: 10px 20px;
     display: block;
     text-decoration: none;
     color: #fff;
+    transition: color 0.3s ease; /* Adaugă o tranziție lină la schimbarea culorii textului */
 }
+
+/* Efect la hover pe linkurile din meniu */
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Efect la hover pe antet */
+header:hover {
+    background-color: #555; /* Schimbă culoarea de fundal la hover */
+}
+/* Stiluri pentru meniu */
+nav ul {
+    list-style-type: none; /* Elimină stilurile implicite de listă */
+    margin: 0;
+    padding: 0;
+}
+
+/* Stiluri pentru fiecare element de meniu */
+nav ul li {
+    display: inline-block;
+}
+
+
 
 nav ul li a:hover {
     background-color: #555;
 }
 
+main {
+    padding: 20px; /* Adaugă spațiu de 20px în interiorul elementului main */
+}
+
+/* Stiluri pentru sectiuni */
+section {
+    background-color: #f9f9f9; /* Setează culoarea de fundal a secțiunilor la un gri deschis */
+    padding: 20px; /* Adaugă un spațiu de 20px în interiorul secțiunilor */
+    margin-bottom: 30px; /* Adaugă un spațiu de 30px între secțiuni */
+    border-radius: 8px; /* Adaugă un margin-radius pentru colțurile secțiunilor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adaugă o umbrire ușoară */
+}
+
+/* Stiluri pentru titluri */
+h2 {
+    color: #333; /* Setează culoarea textului pentru titluri la un gri mai închis */
+    margin-bottom: 15px; /* Adaugă un spațiu de 15px între titluri și conținut */
+}
+
+/* Stiluri pentru paragrafe */
+p {
+    line-height: 1.6; /* Setează spațiul între liniile de text pentru a face textul mai ușor de citit */
+    color: #666; /* Setează culoarea textului pentru paragrafe la un gri mai închis */
+    margin-bottom: 10px; /* Adaugă un spațiu de 10px între paragrafe */
+}
+
+/* Stiluri pentru paragrafele din secțiunea "Despre noi" */
+section#despre-noi p {
+    color: #000; /* Setează culoarea textului pentru paragrafele din secțiunea "Despre noi" la negru */
+}
+
+/* Stiluri pentru lista */
+ul {
+    margin-top: 10px; /* Adaugă un spațiu de 10px între lista și conținutul precedent */
+}
+
+/* Stiluri pentru elementele din lista */
+li {
+    margin-bottom: 5px; /* Adaugă un spațiu de 5px între elementele listei */
+    color: #444; /* Setează culoarea textului pentru elementele listei la un gri închis */
+}
+ footer p{
+    color: #fff; 
+ }
 /* Stiluri pentru footer */
 footer {
     position: fixed; /* Fixează footerul în partea de jos a ferestrei browser-ului */
     bottom: 0; /* Plasează footerul la baza paginii */
     width: 100%; /* Extinde footerul pe întreaga lățime a paginii */
-    background-color: #333; /* Setează culoarea de fundal a footerului la negru */
-    color: #fff; /* Setează culoarea textului la alb */
+    background-color: #333; /* Setează culoarea de fundal a footerului la un gri închis */
+    color: #fff; /* Setează culoarea textului din footer la alb */
     padding: 10px 20px; /* Adaugă spațiu de 10px pe verticală și 20px pe orizontală în interiorul footerului */
     text-align: center; /* Aliniază textul din footer la centru */
 }
 
-
-main {
-    padding: 20px; /* Adaugă spațiu de 20px în interiorul elementului main */
-}
-
-section {
-    margin-bottom: 20px; /* Adaugă un spațiu de 20px între secțiuni */
-}
 
 /* Stiluri pentru tabel */
 table {
@@ -81,5 +134,118 @@ th {
 
     nav ul li a {
         padding: 5px 10px; /*  spațiul de padding pentru link-uri la 5px pe verticală și 10px pe orizontală */
+    }
+}
+
+
+
+/*Stiluri pentru contact*/
+/* Stiluri pentru secțiunea de contact */
+#contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-info, .contact-form, .map {
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-info:hover, .contact-form:hover, .map:hover {
+    transform: translateY(-5px);
+}
+
+.contact-info h2, .contact-form h2, .map h2 {
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #666;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* Stiluri pentru dispozitivele mobile */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 10px; /* Reducerea spațiului de padding al antetului */
+    }
+
+    nav ul li {
+        display: block; /* Afișarea elementelor de meniu ca blocuri pentru alinierea verticală */
+        margin-bottom: 10px; /* Adăugarea unui spațiu între elementele de meniu */
+    }
+
+    nav ul li a {
+        padding: 5px 10px; /* Reducerea spațiului de padding pentru link-urile de meniu */
+    }
+
+    main {
+        padding: 10px; /* Reducerea spațiului de padding pentru conținutul principal */
+    }
+
+    section {
+        padding: 15px; /* Reducerea spațiului de padding pentru secțiuni */
+    }
+
+    section#despre-noi p1 {
+        font-size: 16px; /* Reducerea dimensiunii fontului pentru paragrafele din secțiunea "Despre noi" */
     }
 }

@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimele stiri- Știri în toată lumea</title>
-    <link rel="stylesheet" href="CSS/stil.css"> <!-- Legătură către fișierul CSS -->
+    <title>Știri - Știri în toată lumea</title>
+    <link rel="stylesheet" href="CSS/stil.css">
 </head>
 <body>
+    <header>
+        <h1>Știri în toată lumea</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="ultimele-stiri.html">Ultimele știri</a></li>
+                <li><a href="despre-noi.html">Despre noi</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-    <h1>Stiri din toata lumea</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="ultimele-stiri.html">Ultimele știri</a></li>
-            <li><a href="despre-noi.html">Despre noi</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <main>
+        <section id="news">
+            <!-- Aici vom afișa butoanele pentru știri -->
+            <div id="newsButtons">
+                <!-- Butonul pentru prima știre -->
+                <button id="button1" class="news-button">Încarcă Știrea 1</button>
+                <!-- Butonul pentru a doua știre -->
+                <button id="button2" class="news-button">Încarcă Știrea 2</button>
+                <!-- Butonul pentru a treia știre -->
+                <button id="button3" class="news-button">Încarcă Știrea 3</button>
+            </div>
+        </section>
+        
+    </main>
 
-<main>
-    <section>
-        <table>
-            <tr>
-                <th>Sortare</th>
-                <th>Căutare</th>
-            </tr>
-            <tr>
-                <td><a href="sortare.html">Sortare</a></td>
-                <td><a href="cautare.html">Căutare</a></td>
-            </tr>
-        </table>
-    </section>
-</main>
+    <footer>
+        <p>&copy; 2024 Matei Bunea și Andrei Adianconitei</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2024 Matei Bunea și Andrei Adianconitei</p>
-</footer>
-
+    <script src="JavaScript/script.js" nonce="YOUR_RANDOM_NONCE"></script>
 </body>
 </html>
