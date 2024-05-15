@@ -248,4 +248,59 @@ th {
     section#despre-noi p1 {
         font-size: 16px; /* Reducerea dimensiunii fontului pentru paragrafele din secțiunea "Despre noi" */
     }
+
+    /* Adaugă o culoare de fundal neagră pentru bara de navigație */
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+/* Stilizează linkurile din bara de navigație */
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Schimbă culoarea linkurilor la hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Stilizează elementul "active" pentru a evidenția pagina curentă */
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Stilizează câmpul de căutare din bara de navigație */
+.topnav input[type="text"] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+/* Când ecranul are o lățime mai mică de 600px, aranjează linkurile și câmpul de căutare vertical */
+@media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type="text"] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type="text"] {
+        border: 1px solid #ccc;
+    }
+}
+
 }
