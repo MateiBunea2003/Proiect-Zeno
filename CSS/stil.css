@@ -304,3 +304,44 @@ th {
 }
 
 }
+
+/* Stil pentru containerul de știri */
+#news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+}
+
+/* Stil pentru fiecare element de știre */
+.news-item {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33% - 40px); /* Ajustează lățimea pentru a permite trei coloane cu spațiu între ele */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; /* Culoare de fundal pentru chenar */
+}
+
+/* Stil pentru imaginea din fiecare element de știre */
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Stil pentru titlul din fiecare element de știre */
+.news-item h3 {
+    margin-top: 0;
+}
+
+/* Stil pentru link-urile din fiecare element de știre */
+.news-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
