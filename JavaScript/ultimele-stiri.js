@@ -24,8 +24,26 @@ function displayNews(news) {
     
 }}
 
-// Functia pentru a sorta stirile crescator dupa titlu
 function sortNewsAsc() {
+    document.getElementById('news-container').innerHTML = '';
+    let newsData = JSON.parse(localStorage.getItem('stiri'));
+    console.log(newsData);
+
+    // Sortăm știrile crescător după titlu
+    newsData.sort((a, b) => {
+        if (a.title < b.title) return -1;
+        if (a.title > b.title) return 1;
+        return 0;
+    });
+
+    console.log(newsData);
+
+    displayNews(newsData); // Afișează știrile după sortare
+}
+
+
+// Functia pentru a sorta stirile crescator dupa titlu
+/*function sortNewsAsc() {
     document.getElementById('news-container').innerHTML = '';
     let newsData=JSON.parse(localStorage.getItem('stiri'));
     console.log(newsData)
@@ -36,7 +54,7 @@ function sortNewsAsc() {
     console.log(newsData)
 
     displayNews(newsData); // Afiseaza stirile dupa sortare
-}
+}*/
 
 // Functia pentru a sorta stirile descrescator dupa titlu
 function sortNewsDesc() {
