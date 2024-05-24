@@ -21,21 +21,7 @@ function displayNews(news) {
         // Adăugarea elementelor în pagina HTML
     document.getElementById('news-container').appendChild(div);
          console.log("debbuging")       
-    // news.forEach(item => {
-    //     const div = document.createElement('div');
-    //     div.classList.add('news-item');
-    //     div.innerHTML = `
-    //         <h3>${item.title}</h3>
-    //         <p><b>Sursa:</b> ${item.source.name}</p>
-    //         <p><b>Autor:</b> ${item.author}</p>
-    //         <p><b>Descriere:</b> ${item.description}</p>
-    //         <p><b>Conținut:</b> ${item.content}</p>
-    //         <p><b>Publicat la:</b> ${item.publishedAt}</p>
-    //         <p><b>URL:</b> <a href="${item.url}">Link către știre</a></p>
-    //         <img src="${item.urlToImage}" alt="Imagine știre">
-    //     `;
-    //     container.appendChild(div);
-    // });
+    
 }}
 
 // Functia pentru a sorta stirile crescator dupa titlu
@@ -55,11 +41,21 @@ function sortNewsAsc() {
 // Functia pentru a sorta stirile descrescator dupa titlu
 function sortNewsDesc() {
     document.getElementById('news-container').innerHTML = '';
-    let newsData=[];
-    newsData=JSON.parse(localStorage.getItem('stiri'));
+    let newsData = JSON.parse(localStorage.getItem('stiri'));
+    console.log(newsData);
 
-    displayNews(newsData); // Afiseaza stirile dupa sortare
+    // Sortăm știrile descrescător după titlu
+    newsData.sort((a, b) => {
+        if (a.title < b.title) return 1;
+        if (a.title > b.title) return -1;
+        return 0;
+    });
+
+    console.log(newsData);
+
+    displayNews(newsData); // Afișează știrile după sortare
 }
+
 
 // Evenimentele de click pentru butoanele de sortare
 document.getElementById('sortAsc').addEventListener('click', (event) => {
