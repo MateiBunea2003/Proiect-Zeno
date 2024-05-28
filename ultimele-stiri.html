@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Știri - Știri în toată lumea</title>
-    <link rel="stylesheet" href="CSS/stil.css">
     <link rel="stylesheet" href="CSS/ultimele-stiri.css">
 </head>
 <body>
@@ -20,22 +20,17 @@
         </nav>
     </header>
     <main>
-        <section id="news">
-            <div class="topnav">
-                <button id="sortAsc">Sortare nume crescatoare</button>
-                <button id="sortDesc">Sortare nume descrescatoare</button>
-                <input type="text" id="date-input" placeholder="2024-05-15">
-                <button id="ok">OK</button>
-            </div>
-            <h2>Cele mai importante stiri sunt aici</h2>
-            <div id="news-container"></div>
-        </section>
+        <div class="topnav">
+            <button id="sortAsc" class="button">Sortare Ascendentă</button>
+            <button id="sortDesc" class="button">Sortare Descendentă</button>
+            <input type="text" id="date-input" placeholder="Introdu_data ex:2024-05-28">
+            <button id="ok" class="button">OK</button>
+        </div>
+        <div id="news-container"></div>
     </main>
-
     <footer>
         <p>&copy; 2024 Matei Bunea și Andrei Adianconitei</p>
     </footer>
-    <script src="JavaScript/script.js"></script>
     <script src="JavaScript/ultimele-stiri.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Despre noi - Știri în toată lumea</title>
@@ -9,7 +10,7 @@
 <body>
 
 <header>
-    <h1>Stiri din toata lumea</h1>
+    <h1>Știri în toată lumea</h1>
     <nav>
         <ul>
             <li><a href="index.html">Acasă</a></li>
@@ -33,12 +34,27 @@
 
     <section>
         <h2>Valorile noastre</h2>
-        <ul>
-            <li>Integritatea - Ne angajăm să fim onești și transparenți în toate informațiile pe care le furnizăm.</li>
-            <li>Imparțialitatea - Ne străduim să prezentăm informațiile fără părtinire și să oferim perspective echilibrate asupra evenimentelor.</li>
-            <li>Calitatea - Ne dedicăm să furnizăm știri precise, verificate și de încredere pentru publicul nostru.</li>
-            <li>Angajamentul față de public - Ne preocupăm să răspundem nevoilor și intereselor cititorilor noștri și să le oferim o experiență plăcută pe site-ul nostru.</li>
-        </ul>
+            <p>Integritatea - Ne angajăm să fim onești și transparenți în toate informațiile pe care le furnizăm.</p>
+            <p>Imparțialitatea - Ne străduim să prezentăm informațiile fără părtinire și să oferim perspective echilibrate asupra evenimentelor.</p>
+            <p>Calitatea - Ne dedicăm să furnizăm știri precise, verificate și de încredere pentru publicul nostru.</p>
+            <p>Angajamentul față de public - Ne preocupăm să răspundem nevoilor și intereselor cititorilor noștri și să le oferim o experiență plăcută pe site-ul nostru.</p>
+     </section>
+     <section>
+        <h2>Explicații cod JavaScript</h2>
+        <p>Acest cod JavaScript este responsabil pentru manipularea datelor de știri și afișarea acestora în interfața utilizatorului.</p>
+        <p>Prin utilizarea metodei <code>document.addEventListener('DOMContentLoaded', () => { ... })</code>, asigurăm că codul nostru se execută doar după ce toate elementele HTML au fost încărcate complet.</p>
+        <p>Funcția <code>displayNews(news)</code> este responsabilă pentru afișarea știrilor în containerul specificat. Aceasta primește un array de obiecte de știri și creează elemente HTML corespunzătoare pentru fiecare știre, adăugându-le în containerul specificat.</p>
+        <p>Funcțiile <code>sortNewsAsc()</code>, <code>sortNewsDesc()</code> și <code>filterNewsByDate()</code> sunt responsabile pentru sortarea și filtrarea știrilor în funcție de titlu sau data de publicare.</p>
+        <p>Este de remarcat că acest cod utilizează și metode de lucru cu API-uri (cum ar fi localStorage) pentru a stoca și gestiona datele de știri.</p>
+    </section>
+    <section>
+        <h2>Aprofundare</h2>
+
+        <h3>Stilizarea Paginii</h3>
+        <p>Stilizarea paginii este responsabilă pentru aspectul vizual al conținutului său. Aceasta este realizată utilizând fișiere CSS și includând reguli de stil care determină aspectul elementelor HTML, precum fonturile, culorile, dimensiunile și aranjamentul acestora. În cazul acestei pagini, am inclus o foaie de stil externă (`stil.css`) pentru a organiza și a aplica stiluri corespunzătoare. De exemplu, am definit fonturi și am stabilit margini și padding-uri pentru a structura și a alinia conținutul în mod corespunzător. Această stilizare îmbunătățește aspectul și lizibilitatea paginii, oferind o experiență plăcută utilizatorului.</p>
+
+        <h3>Funcția sortNewsAsc()</h3>
+        <p>Funcția `sortNewsAsc()` este responsabilă pentru sortarea știrilor în ordine crescătoare după titlu. Atunci când utilizatorul apasă butonul de sortare a știrilor în ordine crescătoare, această funcție este apelată. Ea obține datele de știri din memoria locală (localStorage), le sortează utilizând metoda `sort()` și criteriul de sortare este titlul fiecărei știri. După sortare, lista știrilor actualizată este afișată utilizând funcția `displayNews(newsData)`, care actualizează conținutul paginii cu știrile sortate. Astfel, funcția `sortNewsAsc()` asigură că utilizatorul poate vizualiza știrile într-o ordine alfabetică crescută pentru o navigare mai eficientă și mai plăcută a conținutului.</p>
     </section>
 </main>
 
