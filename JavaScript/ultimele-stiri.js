@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function filterNewsByDate() {
-        const inputDate = document.getElementById('date-input').value;
+        const inputDate = document.getElementById('datepicker').value;
         if (!inputDate) {
             alert('Vă rugăm să introduceți o dată.');
             return;

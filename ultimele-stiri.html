@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Știri - Știri în toată lumea</title>
     <link rel="stylesheet" href="CSS/ultimele-stiri.css">
+    <!-- Include jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
 </head>
 <body>
     <header>
@@ -23,7 +25,7 @@
         <div class="topnav">
             <button id="sortAsc" class="button">Sortare Ascendentă</button>
             <button id="sortDesc" class="button">Sortare Descendentă</button>
-            <input type="text" id="date-input" placeholder="Introdu_data ex:2024-05-28">
+            <input type="text" id="datepicker" placeholder="Selectează data">
             <button id="ok" class="button">OK</button>
         </div>
         <div id="news-container"></div>
@@ -31,6 +33,18 @@
     <footer>
         <p>&copy; 2024 Matei Bunea și Andrei Adianconitei</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#datepicker").datepicker({
+                dateFormat: "yy-mm-dd",
+                onSelect: function(dateText) {
+                    $(this).val(dateText);
+                }
+            });
+        });
+    </script>
     <script src="JavaScript/ultimele-stiri.js"></script>
 </body>
 </html>
